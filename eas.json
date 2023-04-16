@@ -1,0 +1,29 @@
+{
+  "cli": {
+    "version": ">= 3.7.1"
+  },
+  "build": {
+    "local": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": { "APP_VARIANT": "local" },
+      "channel": "local",
+      "ios": {
+        "resourceClass": "m1-medium"
+      }
+    },
+    "dev": {
+      "distribution": "internal",
+      "env": { "APP_VARIANT": "dev" },
+      "channel": "dev"
+    },
+    "production": {
+      "env": { "APP_VARIANT": "production" },
+      "ios": { "resourceClass": "m1-medium" },
+      "channel": "production"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
